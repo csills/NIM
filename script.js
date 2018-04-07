@@ -21,6 +21,9 @@ function removeRocks(rocksToBeRemoved) {
     printNimBoard();
 }
 
+//A different way to switch player turns is by toggling booleans:
+//EX. var isPlayerOnesTurn = true;
+//    isPlayerOnesTurn = !isPlayerOnesTurn;
 
 function playerTurn() {
     if (player === 1) {
@@ -39,6 +42,8 @@ function playerAction () {
         removeRocks(2);
     }else if (chooseRocks === 3) {
         removeRocks(3);
+    }else {
+        console.log("Please choose again: 1, 2 or 3 rocks?")
     }
     playerTurn();
 }
